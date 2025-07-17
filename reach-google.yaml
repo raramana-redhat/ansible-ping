@@ -6,7 +6,7 @@
   tasks:
 
   - name: Print the website
-  debug:
+    debug:
     msg: "The website is: {{ url }}"
 
   - name: Ensure website is reachable
