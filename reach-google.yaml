@@ -1,8 +1,14 @@
 ---
-- name: Ping google website
+- name: Ping the website
   hosts: localhost
 
+
   tasks:
-  - name: Ensure apache is at the latest version
+
+  - name: Print the website
+  debug:
+    msg: "The website is: {{ url }}"
+
+  - name: Ensure website is reachable
     ansible.builtin.uri:
-      url: https://google.com
+      url: "{{ url }}"
